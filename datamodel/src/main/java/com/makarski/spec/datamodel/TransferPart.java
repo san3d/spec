@@ -15,4 +15,28 @@ public class TransferPart{
 	@Column
 	private BigDecimal quantity;
 
+	public Part getPartFk() {
+		return partFk;
+	}
+
+	public void setPartFk(Part partFk) {
+		this.partFk = partFk;
+	}
+
+	public TransferOrder getTransferFk() {
+		return transferFk;
+	}
+
+	public void setTransferFk(TransferOrder transferFk) {
+		this.transferFk = transferFk;
+	}
+
+	public BigDecimal getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(BigDecimal quantity) {
+		this.quantity = quantity;
+	}
+
 }

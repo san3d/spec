@@ -4,13 +4,8 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.JoinType;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
+import javax.persistence.criteria.*;
 
-import org.hibernate.jpa.criteria.OrderImpl;
 import org.springframework.stereotype.Repository;
 
 import com.makarski.spec.dataaccess.UserProfileDao;
@@ -46,9 +41,11 @@ public class UserProfileDaoImpl extends AbstractDaoImpl<UserProfile, Long> imple
 		}
 
 		// set sort params
-		/*if (filter.getSortProperty() != null) {
-			cq.orderBy(new OrderImpl(from.get(filter.getSortProperty()), filter.isSortOrder()));
-		}*/
+		/*
+		 * if (filter.getSortProperty() != null) { cq.orderBy(new
+		 * OrderImpl(from.get(filter.getSortProperty()), filter.isSortOrder()));
+		 * }
+		 */
 
 		TypedQuery<UserProfile> q = em.createQuery(cq);
 
@@ -61,5 +58,11 @@ public class UserProfileDaoImpl extends AbstractDaoImpl<UserProfile, Long> imple
 		// set execute query
 		List<UserProfile> allitems = q.getResultList();
 		return allitems;
+	}
+
+	@Override
+	public UserProfile getProfileByEmail(String email) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

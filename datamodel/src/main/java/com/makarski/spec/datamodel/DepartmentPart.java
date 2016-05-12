@@ -19,4 +19,36 @@ public class DepartmentPart extends AbstractModel {
 	@Column
 	private Date dateChange;
 
+	public Part getPartFk() {
+		return partFk;
+	}
+
+	public void setPartFk(Part partFk) {
+		this.partFk = partFk;
+	}
+
+	public Department getDepartmentFk() {
+		return departmentFk;
+	}
+
+	public void setDepartmentFk(Department departmentFk) {
+		this.departmentFk = departmentFk;
+	}
+
+	public BigDecimal getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(BigDecimal quantity) {
+		this.quantity = quantity;
+	}
+
+	public Date getDateChange() {
+		return dateChange;
+	}
+
+	public void setDateChange(Date dateChange) {
+		this.dateChange = dateChange;
+	}
+
 }

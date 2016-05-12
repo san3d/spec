@@ -29,4 +29,60 @@ public class Part extends AbstractModel {
 	@Column
 	private String note;
 
+	public List<DepartmentPart> getDepartmentParts() {
+		return departmentParts;
+	}
+
+	public void setDepartmentParts(List<DepartmentPart> departmentParts) {
+		this.departmentParts = departmentParts;
+	}
+
+	public List<ReservePart> getReserveParts() {
+		return reserveParts;
+	}
+
+	public void setReserveParts(List<ReservePart> reserveParts) {
+		this.reserveParts = reserveParts;
+	}
+
+	public List<TransferPart> getTransferParts() {
+		return transferParts;
+	}
+
+	public void setTransferParts(List<TransferPart> transferParts) {
+		this.transferParts = transferParts;
+	}
+
+	public String getSpecification() {
+		return specification;
+	}
+
+	public void setSpecification(String specification) {
+		this.specification = specification;
+	}
+
+	public Unit getUnitFk() {
+		return unitFk;
+	}
+
+	public void setUnitFk(Unit unitFk) {
+		this.unitFk = unitFk;
+	}
+
+	public List<Tag> getTags() {
+		return tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;
+	}
+
+	public String getNote() {
+		return note;
+	}
+
+	public void setNote(String note) {
+		this.note = note;
+	}
+
 }

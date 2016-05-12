@@ -25,4 +25,52 @@ public class ReserveOrder extends AbstractModel {
 	@Column
 	private String comment;
 
+	public List<ReserveOrder> getReserveOrders() {
+		return reserveOrders;
+	}
+
+	public void setReserveOrders(List<ReserveOrder> reserveOrders) {
+		this.reserveOrders = reserveOrders;
+	}
+
+	public Department getStockDepartmentFk() {
+		return stockDepartmentFk;
+	}
+
+	public void setStockDepartmentFk(Department stockDepartmentFk) {
+		this.stockDepartmentFk = stockDepartmentFk;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public UserProfile getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(UserProfile author) {
+		this.author = author;
+	}
+
+	public Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+
 }

@@ -15,4 +15,28 @@ public class ReservePart {
 	@Column
 	private BigDecimal quantity;
 
+	public Part getPartFk() {
+		return partFk;
+	}
+
+	public void setPartFk(Part partFk) {
+		this.partFk = partFk;
+	}
+
+	public ReserveOrder getReserveFk() {
+		return reserveFk;
+	}
+
+	public void setReserveFk(ReserveOrder reserveFk) {
+		this.reserveFk = reserveFk;
+	}
+
+	public BigDecimal getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(BigDecimal quantity) {
+		this.quantity = quantity;
+	}
+
 }

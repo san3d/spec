@@ -16,8 +16,8 @@
 
 	<context:annotation-config />
 
-	<context:component-scan base-package="by.makarski.spec.service.impl" />
-	<context:component-scan base-package="by.makarski.spec.dataaccess.impl" />
+	<context:component-scan base-package="com.makarski.spec.service.impl" />
+	<context:component-scan base-package="com.makarski.spec.dataaccess.impl" />
 
 
 	<bean id="dataSource"
