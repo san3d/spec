@@ -7,7 +7,8 @@ import com.makarski.spec.datamodel.UserProfile;
 
 public interface UserProfileDao extends AbstractDao<UserProfile, Long> {
 	
-	public UserProfile getProfileByEmail(String email);
+//	public UserProfile getProfileByEmail(String email); //доработать
 	
-	List<UserProfile> find(UserFilter filter); 
+	List<UserProfile> find(UserFilter filter); // как у Димы
+	
 }
