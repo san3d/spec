@@ -1,8 +1,8 @@
-package by.dzhivushko.training.shop.webapp.common;
+package com.makarski.spec.webapp.common;
 
 import org.apache.wicket.markup.html.form.ChoiceRenderer;
 
-import by.dzhivushko.training.shop.datamodel.UserRole;
+import com.makarski.spec.datamodel.UserRole;
 
 public class UserRoleChoiceRenderer extends ChoiceRenderer<UserRole> {
 

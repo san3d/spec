@@ -1,4 +1,4 @@
-package by.dzhivushko.training.shop.webapp.app;
+package com.makarski.spec.webapp.app;
 
 import javax.inject.Inject;
 
@@ -10,9 +10,9 @@ import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
-import by.dzhivushko.training.shop.webapp.page.home.HomePage;
-import by.dzhivushko.training.shop.webapp.page.login.LoginPage;
-import by.dzhivushko.training.shop.webapp.page.product.ProductEditPage;
+import com.makarski.spec.webapp.page.home.HomePage;
+import com.makarski.spec.webapp.page.login.LoginPage;
+import com.makarski.spec.webapp.page.product.ProductEditPage;
 
 @Component("wicketWebApplicationBean")
 public class WicketApplication extends AuthenticatedWebApplication {

@@ -1,8 +1,8 @@
-package by.dzhivushko.training.shop.webapp.common;
+package com.makarski.spec.webapp.common;
 
 import org.apache.wicket.markup.html.form.ChoiceRenderer;
 
-import by.dzhivushko.training.shop.datamodel.Product;
+import com.makarski.spec.datamodel.Part;
 
 public class ProductChoiceRenderer extends ChoiceRenderer<Product> {
 
@@ -13,12 +13,12 @@ public class ProductChoiceRenderer extends ChoiceRenderer<Product> {
     }
 
     @Override
-    public Object getDisplayValue(Product object) {
+    public Object getDisplayValue(Part object) {
         return object.getName();
     }
 
     @Override
-    public String getIdValue(Product object, int index) {
+    public String getIdValue(Part object, int index) {
         return String.valueOf(object.getId());
     }
 }

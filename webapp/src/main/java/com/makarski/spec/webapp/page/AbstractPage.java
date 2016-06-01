@@ -10,8 +10,6 @@ import org.apache.wicket.model.AbstractReadOnlyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 import com.makarski.spec.webapp.component.menu.MenuPanel;
-import com.makarski.spec.webapp.component.menu.MenuPanelLoggedUser;
-import com.makarski.spec.webapp.page.product.ProductsPage;
 
 public abstract class AbstractPage extends WebPage {
 
@@ -27,11 +25,7 @@ public abstract class AbstractPage extends WebPage {
     protected void onInitialize() {
         super.onInitialize();
 
-        if (getPage().getClass().equals(ProductsPage.class)) {
-            add(new MenuPanelLoggedUser("menu-panel"));
-        } else {
-            add(new MenuPanel("menu-panel"));
-        }
+        add(new MenuPanel("menu-panel"));
 
         AbstractReadOnlyModel<Integer> yearModel = new AbstractReadOnlyModel<Integer>() {
             @Override

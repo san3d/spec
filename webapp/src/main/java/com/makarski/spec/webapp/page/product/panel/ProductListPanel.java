@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Iterator;
 
 import javax.inject.Inject;
+import javax.persistence.PersistenceException;
 import javax.persistence.metamodel.SingularAttribute;
 
 import org.apache.wicket.datetime.markup.html.basic.DateLabel;
@@ -12,6 +13,7 @@ import org.apache.wicket.extensions.markup.html.repeater.data.sort.SortOrder;
 import org.apache.wicket.extensions.markup.html.repeater.util.SortableDataProvider;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.CheckBox;
+import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.markup.repeater.Item;
@@ -23,6 +25,8 @@ import com.makarski.spec.dataaccess.filters.ProductFilter;
 import com.makarski.spec.datamodel.Product;
 import com.makarski.spec.datamodel.Product_;
 import com.makarski.spec.service.ProductService;
+import com.makarski.spec.webapp.page.product.ProductEditPage;
+import com.makarski.spec.webapp.page.product.ProductsPage;
 
 public class ProductListPanel extends Panel {
 
@@ -42,6 +46,26 @@ public class ProductListPanel extends Panel {
                 item.add(new Label("name", product.getName()));
                 item.add(new Label("price", product.getBasePrice()));
                 item.add(DateLabel.forDatePattern("created", Model.of(product.getCreated()), "dd-MM-yyyy"));
+
+                item.add(new Link<Void>("edit-link") {
+                    @Override
+                    public void onClick() {
+                        setResponsePage(new ProductEditPage(product));
+                    }
+                });
+
+                item.add(new Link<Void>("delete-link") {
+                    @Override
+                    public void onClick() {
+                        try {
+                            productService.delete(product);
+                        } catch (PersistenceException e) {
+                            System.out.println("caughth persistance exception");
+                        }
+
+                        setResponsePage(new ProductsPage());
+                    }
+                });
 
                 CheckBox checkbox = new CheckBox("active", Model.of(product.getActive()));
                 checkbox.setEnabled(false);

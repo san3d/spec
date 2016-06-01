@@ -1,4 +1,4 @@
-package com.epam.training.webapp;
+package com.makarski.spec.webapp;
 
 import java.lang.management.ManagementFactory;
 

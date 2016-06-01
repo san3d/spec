@@ -1,3 +1,35 @@
 <wicket:extend>
-	<h2>Home</h2>
+	<h2>Create new Product variant</h2>
+
+
+	<form wicket:id="form">
+
+		<table style="width: 100%">
+			<tr>
+				<td><b>name:</b></td>
+				<td><input wicket:id="name" type="text" /></td>
+			</tr>
+			<tr>
+				<td><b>priceInfluence:</b></td>
+				<td><input wicket:id="priceInfluence" type="text" /></td>
+			</tr>
+			<tr>
+				<td><b>product:</b></td>
+				<td><select wicket:id="product"></select></td>
+			</tr>
+			<tr>
+				<td><b>attributes:</b></td>
+				<td><span wicket:id="attributes" /></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<button wicket:id="save">save</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+	-------------------------------------<br />
+	<span wicket:id="counter"></span>
+	<button wicket:id="btn-increment">+1</button>
 </wicket:extend>

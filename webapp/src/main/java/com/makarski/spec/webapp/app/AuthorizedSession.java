@@ -1,4 +1,4 @@
-package by.dzhivushko.training.shop.webapp.app;
+package com.makarski.spec.webapp.app;
 
 import javax.inject.Inject;
 
