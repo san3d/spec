@@ -1,4 +1,4 @@
-package com.makarski.spec.webapp.page.product.panel;
+package com.makarski.spec.webapp.page.part.panel;
 
 import java.io.Serializable;
 import java.util.Iterator;
@@ -25,8 +25,8 @@ import com.makarski.spec.dataaccess.filters.ProductFilter;
 import com.makarski.spec.datamodel.Product;
 import com.makarski.spec.datamodel.Product_;
 import com.makarski.spec.service.ProductService;
-import com.makarski.spec.webapp.page.product.ProductEditPage;
-import com.makarski.spec.webapp.page.product.ProductsPage;
+import com.makarski.spec.webapp.page.part.ProductEditPage;
+import com.makarski.spec.webapp.page.part.ProductsPage;
 
 public class ProductListPanel extends Panel {
 

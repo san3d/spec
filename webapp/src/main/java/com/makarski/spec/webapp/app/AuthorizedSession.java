@@ -12,10 +12,15 @@ import com.makarski.spec.datamodel.UserProfile;
 import com.makarski.spec.service.UserService;
 
 public class AuthorizedSession extends AuthenticatedWebSession {
-    @Inject
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Inject
     private UserService userService;
 
-    private UserCredentials loggedUser;
+    private UserProfile loggedUser;
 
     private Roles roles;
 
@@ -51,7 +56,7 @@ public class AuthorizedSession extends AuthenticatedWebSession {
         roles = null;
     }
 
-    public UserCredentials getLoggedUser() {
+    public UserProfile getLoggedUser() {
         return loggedUser;
     }
 

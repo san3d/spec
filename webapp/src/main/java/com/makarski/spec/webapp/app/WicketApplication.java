@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 import com.makarski.spec.webapp.page.home.HomePage;
 import com.makarski.spec.webapp.page.login.LoginPage;
-import com.makarski.spec.webapp.page.product.ProductEditPage;
+import com.makarski.spec.webapp.page.part.ProductEditPage;
 
 @Component("wicketWebApplicationBean")
 public class WicketApplication extends AuthenticatedWebApplication {

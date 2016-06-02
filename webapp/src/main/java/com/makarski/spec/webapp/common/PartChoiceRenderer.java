@@ -6,7 +6,11 @@ import com.makarski.spec.datamodel.Part;
 
 public class PartChoiceRenderer extends ChoiceRenderer<Part> {
 
-    public static final PartChoiceRenderer INSTANCE = new PartChoiceRenderer();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public static final PartChoiceRenderer INSTANCE = new PartChoiceRenderer();
 
     private PartChoiceRenderer() {
         super();

@@ -1,6 +1,6 @@
-package by.dzhivushko.training.shop.dataaccess.filters;
+package com.makarski.spec.dataaccess.filters;
 
-public class ProductFilter extends AbstractFilter {
+public class PartFilter extends AbstractFilter {
 
     private String name;
 

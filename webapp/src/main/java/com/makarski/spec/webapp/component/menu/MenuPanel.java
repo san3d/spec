@@ -7,7 +7,7 @@ import com.makarski.spec.webapp.app.AuthorizedSession;
 import com.makarski.spec.webapp.page.attributes.AttributesPage;
 import com.makarski.spec.webapp.page.home.HomePage;
 import com.makarski.spec.webapp.page.login.LoginPage;
-import com.makarski.spec.webapp.page.product.ProductsPage;
+import com.makarski.spec.webapp.page.part.ProductsPage;
 import com.makarski.spec.webapp.page.user.UsersPage;
 
 public class MenuPanel extends Panel {

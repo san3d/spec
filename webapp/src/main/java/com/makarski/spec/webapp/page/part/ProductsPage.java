@@ -1,11 +1,11 @@
-package com.makarski.spec.webapp.page.product;
+package com.makarski.spec.webapp.page.part;
 
 import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
 import org.apache.wicket.markup.html.link.Link;
 
 import com.makarski.spec.datamodel.Product;
 import com.makarski.spec.webapp.page.AbstractPage;
-import com.makarski.spec.webapp.page.product.panel.ProductListPanel;
+import com.makarski.spec.webapp.page.part.panel.ProductListPanel;
 
 @AuthorizeInstantiation(value = { "admin", "customer" })
 public class ProductsPage extends AbstractPage {

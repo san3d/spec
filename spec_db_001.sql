@@ -5,7 +5,7 @@
 -- Dumped from database version 9.5.2
 -- Dumped by pg_dump version 9.5.2
 
--- Started on 2016-05-31 00:14:41
+-- Started on 2016-06-03 00:48:18
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -694,11 +694,11 @@ SELECT pg_catalog.setval('unit_id_seq', 1, false);
 -- Data for Name: user_profile; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO user_profile (id, email, password, department_fk, first_name, last_name, role, log_in) VALUES (3, 'test3@gmail.com', 'test', 1, 'First3', 'Last3', 1, '2001-01-01');
-INSERT INTO user_profile (id, email, password, department_fk, first_name, last_name, role, log_in) VALUES (2, 'test2@gmail.com', 'test', 1, 'First2', 'Last2', 1, '2001-01-01');
-INSERT INTO user_profile (id, email, password, department_fk, first_name, last_name, role, log_in) VALUES (4, 'test4@gmail.com', 'test', 1, 'First4', 'Last4', 1, '2001-01-01');
-INSERT INTO user_profile (id, email, password, department_fk, first_name, last_name, role, log_in) VALUES (5, 'test5@gmail.com', 'test', 1, 'First5', 'Last5', 1, '2001-01-01');
 INSERT INTO user_profile (id, email, password, department_fk, first_name, last_name, role, log_in) VALUES (1, 'test1@gmail.com', 'test', 1, 'First1', 'Last1', 0, '2001-01-01');
+INSERT INTO user_profile (id, email, password, department_fk, first_name, last_name, role, log_in) VALUES (2, 'test2@gmail.com', 'test', 2, 'First2', 'Last2', 1, '2001-01-01');
+INSERT INTO user_profile (id, email, password, department_fk, first_name, last_name, role, log_in) VALUES (3, 'test3@gmail.com', 'test', 3, 'First3', 'Last3', 1, '2001-01-01');
+INSERT INTO user_profile (id, email, password, department_fk, first_name, last_name, role, log_in) VALUES (4, 'test4@gmail.com', 'test', 4, 'First4', 'Last4', 1, '2001-01-01');
+INSERT INTO user_profile (id, email, password, department_fk, first_name, last_name, role, log_in) VALUES (5, 'test5@gmail.com', 'test', 5, 'First5', 'Last5', 1, '2001-01-01');
 
 
 --
@@ -1034,7 +1034,7 @@ ALTER TABLE ONLY user_profile
     ADD CONSTRAINT user_profile_fk0 FOREIGN KEY (department_fk) REFERENCES department(id);
 
 
--- Completed on 2016-05-31 00:14:42
+-- Completed on 2016-06-03 00:48:19
 
 --
 -- PostgreSQL database dump complete

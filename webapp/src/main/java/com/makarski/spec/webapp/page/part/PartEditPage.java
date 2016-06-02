@@ -1,4 +1,4 @@
-package com.makarski.spec.webapp.page.product;
+package com.makarski.spec.webapp.page.part;
 
 import javax.inject.Inject;
 
@@ -16,11 +16,11 @@ import org.apache.wicket.model.IModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.validation.validator.RangeValidator;
 
-import com.makarski.spec.datamodel.Product;
-import com.makarski.spec.service.ProductService;
+import com.makarski.spec.datamodel.Part;
+import com.makarski.spec.service.PartService;
 import com.makarski.spec.webapp.page.AbstractPage;
 
-public class ProductEditPage extends AbstractPage {
+public class PartEditPage extends AbstractPage {
 
     @Inject
     private ProductService productService;
